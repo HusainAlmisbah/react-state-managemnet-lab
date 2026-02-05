@@ -14,3 +14,59 @@ li {
   border: whitesmoke 3px solid;
   border-radius: 8px;
 }
+
+.fighter-card {
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 10px;
+  width: 127px;
+  text-align: left;
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: top;
+}
+
+.fighter-card p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.fighter-card button {
+  padding: auto;
+  margin-top: 6px;
+}
+
+.fighter-card * {
+  line-height: 2;
+}
+
+.team-strength,
+.team-agility {
+  display: inline;
+}
+
+/* h1 {
+  margin-top: -120px;
+} */
+
+/* h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  text-align: left;
+} */
+
+
+.fighter-card button {
+  align-self: flex-start;
+  padding: 2px 20px;
+  width: auto;
+}
+
+.fighter-card .fighter-name {
+  font-weight: bold;
+}

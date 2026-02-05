@@ -102,40 +102,38 @@ function App() {
   return (
     <>
       <div>
-        <h1>Fighters Team</h1>
-        <hr />
-        <hr />
+        <h1>Zombie Fighters</h1>
+
 
         <h2>Money: ${money}</h2>
+  
+        <h2 className='team-strength'>Team Strength: </h2>
+        <h2 className='team-strength'>{team.reduce((total, fighter) => total + fighter.strength, 0)}</h2>
 
-        <h2>Team Strength: </h2>
-        <p>{team.reduce((total, fighter) => total + fighter.strength, 0)}</p>
+        <br /><br />
 
-        <h2>Team Agility: </h2>
-        <p>{team.reduce((total, fighter) => total + fighter.agility, 0)}</p>
+        <h2 className='team-agility'>Team Agility: </h2>
+        <h2 className='team-agility'>{team.reduce((total, fighter) => total + fighter.agility, 0)}</h2>
 
-        <hr />
-        <hr />
 
-        <h2>My Team</h2>
+        <h2 className='team'>Team</h2>
+        {team.length === 0 && <p>Pick some team members</p>}
         {team.map((fighter) => (
           <div key={fighter.id} className="fighter-card">
             <img src={fighter.img} alt={fighter.name} />
-            <p>{fighter.name}</p>
+            <p className='fighter-name'>{fighter.name}</p>
             <p>Price: ${fighter.price}</p>
             <p>Strength: {fighter.strength}</p>
             <p>Agility: {fighter.agility}</p>
           </div>
         ))}
 
-        <hr />
-        <hr />
 
         <h2>Fighters</h2>
         {zombieFighters.map((fighter) => (
           <div key={fighter.id} className="fighter-card">
             <img src={fighter.img} alt={fighter.name} />
-            <p>{fighter.name}</p>
+            <p className='fighter-name'>{fighter.name}</p>
             <p>Price: ${fighter.price}</p>
             <p>Strength: {fighter.strength}</p>
             <p>Agility: {fighter.agility}</p>
