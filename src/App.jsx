@@ -133,7 +133,7 @@ function App() {
             <p>Agility: {fighter.agility}</p>
             <button onClick={() => handleRemoveFighter(fighter)}>Remove</button>
           </div>
-          
+
         ))}
 
 
