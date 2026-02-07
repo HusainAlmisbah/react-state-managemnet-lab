@@ -113,13 +113,13 @@ function App() {
 
         <h2>Money: ${money}</h2>
 
-        <h2 className='team-strength'>Team Strength: </h2>
-        <h2 className='team-strength'>{team.reduce((total, fighter) => total + fighter.strength, 0)}</h2>
+        <h2 className='team-strength'>Team Strength: {team.reduce((total, fighter) => total + fighter.strength, 0)}</h2>
+        {/* <h2 className='team-strength'>{team.reduce((total, fighter) => total + fighter.strength, 0)}</h2> */}
 
-        <br /><br />
+        {/* <br /><br /> */}
 
-        <h2 className='team-agility'>Team Agility: </h2>
-        <h2 className='team-agility'>{team.reduce((total, fighter) => total + fighter.agility, 0)}</h2>
+        <h2 className='team-agility'>Team Agility: {team.reduce((total, fighter) => total + fighter.agility, 0)}</h2>
+        {/* <h2 className='team-agility'>{team.reduce((total, fighter) => total + fighter.agility, 0)}</h2> */}
 
 
         <h2 className='team'>Team</h2>
