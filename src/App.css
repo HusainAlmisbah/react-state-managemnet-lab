@@ -35,6 +35,9 @@ li {
 .fighter-card button {
   padding: auto;
   margin-top: 6px;
+  align-self: flex-start;
+  padding: 2px 20px;
+  width: auto;
 }
 
 .fighter-card * {
@@ -60,12 +63,6 @@ li {
   text-align: left;
 } */
 
-
-.fighter-card button {
-  align-self: flex-start;
-  padding: 2px 20px;
-  width: auto;
-}
 
 .fighter-card .fighter-name {
   font-weight: bold;

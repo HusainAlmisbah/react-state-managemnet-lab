@@ -99,6 +99,12 @@ function App() {
     }
   }
 
+  function handleRemoveFighter(fighter) {
+    setTeam(team.filter((member) => member.id !== fighter.id))
+    setMoney(money + fighter.price)
+    setZombies([...zombieFighters, fighter])
+  }
+
   return (
     <>
       <div>
@@ -106,7 +112,7 @@ function App() {
 
 
         <h2>Money: ${money}</h2>
-  
+
         <h2 className='team-strength'>Team Strength: </h2>
         <h2 className='team-strength'>{team.reduce((total, fighter) => total + fighter.strength, 0)}</h2>
 
@@ -125,7 +131,9 @@ function App() {
             <p>Price: ${fighter.price}</p>
             <p>Strength: {fighter.strength}</p>
             <p>Agility: {fighter.agility}</p>
+            <button onClick={() => handleRemoveFighter(fighter)}>Remove</button>
           </div>
+          
         ))}
 
 
